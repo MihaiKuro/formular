@@ -10,13 +10,13 @@ function validateForm() {
     // Validare e-mail
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!email.match(emailPattern)) {
-        emailError.textContent = 'Introduceți o adresă de e-mail validă.';
+        emailError.textContent = 'Introduceți o adresă de e-mail valida.';
         return false;
     } else {
         emailError.textContent = '';
     }
 
-    // Validare parolă
+    // Validare parola
     const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d]{8,}$/;
     if (!password.match(passwordPattern)) {
         passwordError.textContent = 'Parola trebuie să conțină cel puțin 8 caractere, cel puțin o literă mică, o literă mare și un număr.';
@@ -25,7 +25,7 @@ function validateForm() {
         passwordError.textContent = '';
     }
 
-    // Confirmare parolă
+    // Confirmare parola
     if (password !== confirmPassword) {
         confirmPasswordError.textContent = 'Parolele nu coincid.';
         return false;
@@ -33,5 +33,5 @@ function validateForm() {
         confirmPasswordError.textContent = '';
     }
 
-    return true; // Returnează true dacă toate validările sunt trecute cu succes
+    return true; // Returneaza true daca toate validarile sunt trecute cu succes
 }
